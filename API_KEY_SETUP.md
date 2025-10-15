@@ -12,7 +12,7 @@ We'll use **OpenRouter** instead of direct OpenAI for all projects. This gives y
 
 ### Your OpenRouter API Key
 ```
-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
+YOUR_OPENROUTER_API_KEY_HERE
 ```
 
 ---
@@ -28,7 +28,7 @@ Create this file (it's git-ignored):
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/interview_prep
 
 # OpenRouter API (Chimera)
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 
@@ -91,7 +91,7 @@ PLAID_SECRET=your_plaid_secret_sandbox
 PLAID_ENV=sandbox
 
 # OpenRouter API (Chimera)
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 
@@ -127,7 +127,7 @@ NEXT_PUBLIC_FIREBASE_APP_ID=1:123456789:web:abc123
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/job_applier
 
 # OpenRouter API (Chimera)
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 
@@ -220,7 +220,7 @@ Run this test to verify your OpenRouter key works:
 # Test from any project directory
 curl https://openrouter.ai/api/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer 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" \
+  -H "Authorization: Bearer YOUR_OPENROUTER_API_KEY_HERE" \
   -d '{
     "model": "openai/gpt-4o",
     "messages": [
@@ -252,7 +252,7 @@ New-Item -Path .env -ItemType File
 # Or use echo
 @"
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/interview_prep
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 SECRET_KEY=change-me-in-production
 MOCK_MODE=True

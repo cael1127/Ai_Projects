@@ -19,7 +19,7 @@ Run these commands from the `AiProjects` directory:
 # 1. Interview Prep Backend
 @"
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/interview_prep
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 SECRET_KEY=interview-prep-secret-change-in-production
@@ -43,7 +43,7 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 PORT=3001
 NODE_ENV=development
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/banking_app
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 JWT_SECRET=banking-app-secret-change-in-production
@@ -70,7 +70,7 @@ NEXT_PUBLIC_FIREBASE_APP_ID=1:123456:web:abc123
 # 5. Job Applier Backend
 @"
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/job_applier
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 SECRET_KEY=job-applier-secret-change-in-production
@@ -104,7 +104,7 @@ If you prefer to create them manually, here are the exact contents:
 
 ```env
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/interview_prep
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 SECRET_KEY=interview-prep-secret-change-in-production
@@ -130,7 +130,7 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 PORT=3001
 NODE_ENV=development
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/banking_app
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 JWT_SECRET=banking-app-secret-change-in-production
@@ -159,7 +159,7 @@ NEXT_PUBLIC_FIREBASE_APP_ID=1:123456:web:abc123
 
 ```env
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/job_applier
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 SECRET_KEY=job-applier-secret-change-in-production
@@ -211,7 +211,7 @@ DATABASE_URL=postgresql://postgres:postgres@localhost:5432/database_name
 
 ### OpenRouter API (Your AI Key)
 ```env
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 ```

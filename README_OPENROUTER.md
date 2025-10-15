@@ -21,7 +21,7 @@ I've successfully integrated **OpenRouter (Chimera)** into all three AI projects
 
 ### Your OpenRouter API Key
 ```
-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
+YOUR_OPENROUTER_API_KEY_HERE
 ```
 
 ### Where It Goes
@@ -31,7 +31,7 @@ You need to create **6 .env files** (one for each backend + frontend):
 #### 1. `interview-prep/backend/.env`
 ```env
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/interview_prep
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 SECRET_KEY=change-me-in-production
@@ -46,7 +46,7 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 #### 3. `banking-app/backend/.env`
 ```env
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/banking_app
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 JWT_SECRET=change-me-in-production
@@ -64,7 +64,7 @@ NEXT_PUBLIC_API_URL=http://localhost:3001
 #### 5. `job-applier/backend/.env`
 ```env
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/job_applier
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 SECRET_KEY=change-me-in-production
@@ -273,7 +273,7 @@ npm run dev
 ✅ **Documentation complete** (4 guide files)
 ✅ **Ready to use** - just create .env files!
 
-**Your OpenRouter key**: `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`
+**Your OpenRouter key**: `YOUR_OPENROUTER_API_KEY_HERE`
 
 **Next**: Follow `QUICK_START.md` to get running in 10 minutes! 🚀
 

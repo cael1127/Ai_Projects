@@ -13,7 +13,7 @@ This guide will help you get all three projects running quickly.
 
 ### API Keys Required
 - [ ] OpenRouter API Key (required for all projects - using Chimera)
-  - Your key: `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`
+  - Your key: `YOUR_OPENROUTER_API_KEY_HERE`
   - Dashboard: https://openrouter.ai/
   - This gives you access to GPT-4o, Claude, and other models!
 

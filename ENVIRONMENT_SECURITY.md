@@ -134,7 +134,7 @@ git check-ignore job-applier/backend/.env
 2. **Hardcode API keys**
    ```python
    # DON'T DO THIS:
-   api_key = "sk-or-v1-e9633099..."
+   api_key = "sk-or-v1-YOUR_KEY..."
    ```
 
 3. **Share .env files**

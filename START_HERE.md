@@ -53,7 +53,7 @@ $dbUrl = "postgresql://postgres:${pgPassword}@localhost:5432"
 PORT=3001
 NODE_ENV=development
 DATABASE_URL=${dbUrl}/banking_app
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 JWT_SECRET=banking-secret
@@ -69,7 +69,7 @@ FIREBASE_CLIENT_EMAIL=demo@demo.com
 # Job Applier Backend
 @"
 DATABASE_URL=${dbUrl}/job_applier
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 SECRET_KEY=job-applier-secret

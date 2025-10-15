@@ -52,21 +52,21 @@ For each backend, create a `.env` file with these settings:
 
 **Interview Prep** (`interview-prep/backend/.env`):
 ```env
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 ```
 
 **Banking App** (`banking-app/backend/.env`):
 ```env
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 ```
 
 **Job Applier** (`job-applier/backend/.env`):
 ```env
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 ```

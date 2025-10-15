@@ -96,7 +96,7 @@ Write-Host ""
 # 1. Interview Prep Backend
 $envContent = @"
 DATABASE_URL=${dbUrlBase}/interview_prep
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 SECRET_KEY=interview-prep-secret-change-in-production
@@ -124,7 +124,7 @@ $envContent = @"
 PORT=3001
 NODE_ENV=development
 DATABASE_URL=${dbUrlBase}/banking_app
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 JWT_SECRET=banking-app-secret-change-in-production
@@ -149,7 +149,7 @@ Write-Host "[OK] banking-app/web/.env.local" -ForegroundColor Green
 # 5. Job Applier Backend
 $envContent = @"
 DATABASE_URL=${dbUrlBase}/job_applier
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_MODEL=openai/gpt-4o
 SECRET_KEY=job-applier-secret-change-in-production
