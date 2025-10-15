@@ -1,0 +1,132 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  firebaseUid   String    @unique
+  fullName      String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  accounts      Account[]
+  budgets       Budget[]
+  goals         SavingGoal[]
+  alerts        Alert[]
+}
+
+model Account {
+  id                String        @id @default(uuid())
+  userId            String
+  user              User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plaidAccountId    String?       @unique
+  plaidItemId       String?
+  name              String
+  officialName      String?
+  type              String        // checking, savings, credit
+  subtype           String?
+  mask              String?       // Last 4 digits
+  currentBalance    Float
+  availableBalance  Float?
+  currency          String        @default("USD")
+  isActive          Boolean       @default(true)
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+  transactions      Transaction[]
+  
+  @@index([userId])
+}
+
+model Transaction {
+  id                  String    @id @default(uuid())
+  accountId           String
+  account             Account   @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  plaidTransactionId  String?   @unique
+  amount              Float
+  date                DateTime
+  name                String
+  merchantName        String?
+  category            String[]
+  aiCategory          String?   // AI-generated category
+  aiSubcategory       String?
+  pending             Boolean   @default(false)
+  paymentChannel      String?
+  location            Json?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+  
+  @@index([accountId])
+  @@index([date])
+  @@index([aiCategory])
+}
+
+model Budget {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  category    String
+  amount      Float
+  period      String   // monthly, weekly
+  startDate   DateTime
+  endDate     DateTime?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([userId])
+}
+
+model SavingGoal {
+  id            String   @id @default(uuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name          String
+  targetAmount  Float
+  currentAmount Float    @default(0)
+  targetDate    DateTime?
+  isCompleted   Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  @@index([userId])
+}
+
+model Alert {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type        String   // unusual_activity, overspending, goal_achieved
+  title       String
+  message     String
+  severity    String   // info, warning, critical
+  isRead      Boolean  @default(false)
+  data        Json?    // Additional context
+  createdAt   DateTime @default(now())
+  
+  @@index([userId])
+  @@index([isRead])
+}
+
+model FinancialSummary {
+  id                  String   @id @default(uuid())
+  userId              String   @unique
+  period              String   // weekly, monthly
+  startDate           DateTime
+  endDate             DateTime
+  totalIncome         Float
+  totalExpenses       Float
+  netSavings          Float
+  topCategories       Json     // Top spending categories
+  insights            Json     // AI-generated insights
+  recommendations     Json     // AI recommendations
+  createdAt           DateTime @default(now())
+  
+  @@index([userId])
+  @@index([period])
+}
+
